@@ -1,4 +1,4 @@
-import { Navbar } from "../NavBar/Navbar"
+import { Navbar } from "../Navbar/Navbar.jsx"
 import { ArrowButton } from "./ArrowButton"
 
 export const Home = () => {
