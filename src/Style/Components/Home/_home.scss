@@ -41,7 +41,7 @@
 
             .about {
                 margin-left: 0;
-                color: $color_3;
+                color: $color_2;
                 text-align: left;
                 line-height: 1.6;
                 font-size: 14px;
@@ -51,7 +51,7 @@
 
 }
 
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (max-width: 992px) and (orientation: landscape) {
     .main_home_container {
 
         .home_container {
@@ -66,6 +66,24 @@
                 text-align: left;
                 line-height: 1.5;
                 font-size: 12px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1600px) { 
+    .main_home_container {
+
+        .home_container {
+
+            .about {
+                margin-left: 1rem;
+                color: $color_2;
+                max-width: 40rem;
+                text-align: left;
+                line-height: 1.6;
+                font-size: 16px;
             }
         }
     }

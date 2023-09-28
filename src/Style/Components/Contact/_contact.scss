@@ -92,7 +92,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (max-width: 992px) and (orientation: landscape) {
     .contact_container {
 
         .main_form_container {
@@ -123,5 +123,19 @@
             width: 102%;
         }
     }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+    .contact_container {
+        height: 100vh;
+
+        .main_form_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+    }
+
 
 }

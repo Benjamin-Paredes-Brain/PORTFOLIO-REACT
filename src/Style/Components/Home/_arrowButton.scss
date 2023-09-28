@@ -41,7 +41,13 @@
 
 }
 
-@media screen and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (max-width: 992px) and (orientation: landscape) {
+    .arrow_container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
     .arrow_container {
         display: none;
     }
