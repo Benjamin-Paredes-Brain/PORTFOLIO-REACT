@@ -63,56 +63,21 @@
         margin-top: 3rem;
 
         .projectCard_container {
-            max-width: 20rem;
-            border: 1px solid $border-color;
-            border-radius: 5%;
-            background: linear-gradient(rgba(36, 16, 83, 0.267), rgb(33, 17, 70));
+            max-width: 18rem;
+            max-height: 100%;
             padding: 1rem;
             margin: 0 2rem;
 
             .projectCard_img {
-                width: 20rem;
-                height: 15rem;
-                border-radius: 10%;
+                width: 18rem;
+                height: 10rem;
             }
 
             .projectCard_title {
-                text-transform: uppercase;
-                font-size: 20px;
-                font-weight: bold;
-                color: $color_2;
-                text-align: center;
+                font-size: 18px;
                 padding-bottom: 1rem;
-                border-bottom: 1px solid $border-color;
             }
 
-            .projectCard_description {
-                color: $color_3;
-                text-align: left;
-                padding: 1rem;
-            }
-
-            .projectCard_button_container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                .projectCard_button {
-                    margin: 1rem;
-                    padding: 10px 30px;
-                    font-size: 16px;
-                    background-color: transparent;
-                    color: $color_3;
-                    border: 2px solid $border-color;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    text-decoration: none;
-
-                    &:hover {
-                        background-color: $bg_color;
-                    }
-                }
-            }
         }
     }
 }
