@@ -50,3 +50,24 @@
     }
 
 }
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .main_home_container {
+
+        .home_container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+
+            .about {
+                margin-left: 1rem;
+                color: $color_2;
+                max-width: 40rem;
+                text-align: left;
+                line-height: 1.5;
+                font-size: 14px;
+            }
+        }
+    }
+
+}

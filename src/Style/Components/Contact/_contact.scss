@@ -91,3 +91,35 @@
 
     }
 }
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .contact_container {
+
+        .main_form_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 0rem;
+        }
+
+        .form_container {
+            max-width: 450px;
+        }
+
+        .inputs_form {
+            padding: 8px;
+            margin: 4px 0;
+            width: 98%;
+        }
+
+        .label_form {
+            margin: 4px 0;
+        }
+
+        .button_form {
+            padding: 10px;
+            margin: 4px 0;
+            width: 102%;
+        }
+    }
+
+}

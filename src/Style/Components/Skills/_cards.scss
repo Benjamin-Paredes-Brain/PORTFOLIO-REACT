@@ -17,7 +17,7 @@
         background: linear-gradient(rgba(36, 16, 83, 0.267), rgb(33, 17, 70));
         border: 0.5px solid $border-color;
         box-shadow: $box_shadow 0px 0.3rem 2rem;
-        
+
 
         .icon_skill {
             font-size: 4rem;
@@ -40,7 +40,7 @@
     .card_skill_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-         margin-top: 2rem;
+        margin-top: 2rem;
 
         .card_skill {
             display: flex;
@@ -52,6 +52,38 @@
             border-radius: 5%;
             margin: 1rem 2rem;
             box-shadow: $box_shadow 0px 0.1rem 2rem;
+
+            .icon_skill {
+                font-size: 2.5rem;
+            }
+
+            .icon_skill_title {
+                font-size: 0.8rem;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .card_skill_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+
+        .card_skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 5%;
+            margin: 1.5rem 2rem;
+            box-shadow: $box_shadow 0px 0.1rem 1rem;
 
             .icon_skill {
                 font-size: 2.5rem;
