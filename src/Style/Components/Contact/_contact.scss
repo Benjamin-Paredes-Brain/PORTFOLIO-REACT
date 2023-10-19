@@ -48,19 +48,19 @@
     .contact_container {
     
         .main_form_container {
-            margin-top: 2rem;
+            margin-top: 0rem;
         }
     
         .form_container {
             max-width: 650px;
             width: 100%;
-            margin: 1rem;
+            margin: 0.5rem;
         }
     
         .inputs_form {
-            padding: 20px;
-            margin: 8px 0;
-            width: 93%;
+            padding: 10px;
+            margin: 4px 0;
+            width: 96%;
             border: 2px solid rgb(88, 29, 184);
             font-size: 20px;
             background: transparent;
@@ -72,18 +72,18 @@
             margin: 8px 0;
             font-weight: bolder;
             color: rgb(88, 29, 184);
-            font-size: 20px;
+            font-size: 16px;
         }
     
         .button_form {
             background: transparent;
             border: 2px solid rgb(88, 29, 184);
             color: rgb(88, 29, 184);
-            padding: 12px;
+            padding: 10px;
             margin: 8px 0;
             cursor: pointer;
             width: 100%;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
         }
     
@@ -98,29 +98,30 @@
         .main_form_container {
             display: flex;
             justify-content: center;
-            margin-top: 3rem;
+            margin-top: 0;
         }
 
         .form_container {
-            max-width: 650px;
             width: 100%;
             margin: 0 1rem;
         }
 
         .inputs_form {
-            padding: 12px;
+            padding: 6px;
             margin: 8px 0;
-            width: 96%;
+            width: 98%;
             border: 2px solid rgb(88, 29, 184);
             font-size: 16px;
             background: transparent;
             color: $color_3;
+            font-size: 12px;
         }
 
         .label_form {
             display: block;
-            margin: 8px 0;
+            margin: 0;
             font-weight: bolder;
+            font-size: 12px;
             color: rgb(88, 29, 184);
         }
 
@@ -128,8 +129,8 @@
             background: transparent;
             border: 2px solid rgb(88, 29, 184);
             color: rgb(88, 29, 184);
-            padding: 12px;
-            margin: 8px 0;
+            padding: 4px;
+            margin: 4px 0;
             cursor: pointer;
             width: 100%;
             font-size: 16px;

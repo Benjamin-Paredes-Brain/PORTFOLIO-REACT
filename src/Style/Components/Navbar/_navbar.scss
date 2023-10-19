@@ -38,12 +38,18 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) { 
+@media screen and (min-width: 768px) and (max-width: 992px) {
     .navbar_container {
         margin-top: 1rem;
-    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
         .navbar_link {
-            margin: 0.2rem;
+            .navbar_icon {
+                margin: 0.4rem;
+                font-size: 1rem
+            }
         }
     }
 }
