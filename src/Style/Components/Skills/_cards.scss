@@ -1,7 +1,8 @@
 .card_skill_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
 
     .card_skill {
         display: flex;
@@ -12,7 +13,7 @@
         width: 200px;
         height: 200px;
         border-radius: 5%;
-        margin: 5rem;
+        margin: 2rem;
 
         background: linear-gradient(rgba(36, 16, 83, 0.267), rgb(33, 17, 70));
         border: 0.5px solid $border-color;
@@ -34,6 +35,36 @@
 
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .card_skill_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 2rem;
+        align-content: center;
+        justify-content: center;
+
+        .card_skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 180px;
+            border-radius: 5%;
+            margin: 1rem 2rem;
+            box-shadow: $box_shadow 0px 0.1rem 2rem;
+
+            .icon_skill {
+                font-size: 4rem;
+            }
+
+            .icon_skill_title {
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -59,71 +90,6 @@
 
             .icon_skill_title {
                 font-size: 0.8rem;
-            }
-        }
-
-    }
-
-}
-
-@media screen and (max-width: 992px) and (orientation: landscape) {
-    .card_skill_container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1rem;
-
-        .card_skill {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 5%;
-            margin: 1rem 1.5rem;
-            box-shadow: $box_shadow 0px 0.1rem 1rem;
-
-            .icon_skill {
-                font-size: 2.2rem;
-            }
-
-            .icon_skill_title {
-                font-size: 0.6rem;
-            }
-        }
-
-    }
-
-}
-
-@media screen and (min-width: 992px) and (max-width: 1600px) {
-
-    .card_skill_container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        align-items: center;
-        justify-content: center;
-        margin-top: 1rem;
-
-        .card_skill {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 140px;
-            height: 140px;
-            border-radius: 5%;
-            margin: 1rem 1.5rem;
-            box-shadow: $box_shadow 0px 0.1rem 1rem;
-
-            .icon_skill {
-                font-size: 3rem;
-            }
-
-            .icon_skill_title {
-                font-size: 1rem;
             }
         }
 

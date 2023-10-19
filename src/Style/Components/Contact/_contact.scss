@@ -4,7 +4,7 @@
     .main_form_container {
         display: flex;
         justify-content: center;
-        margin-top: 10rem;
+        margin-top: 3rem;
     }
 
     .form_container {
@@ -42,6 +42,52 @@
         font-weight: bold;
     }
 
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .contact_container {
+    
+        .main_form_container {
+            margin-top: 2rem;
+        }
+    
+        .form_container {
+            max-width: 650px;
+            width: 100%;
+            margin: 1rem;
+        }
+    
+        .inputs_form {
+            padding: 20px;
+            margin: 8px 0;
+            width: 93%;
+            border: 2px solid rgb(88, 29, 184);
+            font-size: 20px;
+            background: transparent;
+            color: $color_3;
+        }
+    
+        .label_form {
+            display: block;
+            margin: 8px 0;
+            font-weight: bolder;
+            color: rgb(88, 29, 184);
+            font-size: 20px;
+        }
+    
+        .button_form {
+            background: transparent;
+            border: 2px solid rgb(88, 29, 184);
+            color: rgb(88, 29, 184);
+            padding: 12px;
+            margin: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -85,58 +131,10 @@
             padding: 12px;
             margin: 8px 0;
             cursor: pointer;
-            width: 104%;
+            width: 100%;
             font-size: 16px;
             font-weight: bold;
         }
 
     }
-}
-
-@media screen and (max-width: 992px) and (orientation: landscape) {
-    .contact_container {
-
-        .main_form_container {
-            display: flex;
-            justify-content: center;
-            margin-top: 0rem;
-        }
-
-        .form_container {
-            max-width: 300px;
-            margin: 0;
-        }
-
-        .inputs_form {
-            padding: 6px;
-            margin: 2px 0;
-            width: 98%;
-        }
-
-        .label_form {
-            margin: 4px 0;
-            font-size: 14px;
-        }
-
-        .button_form {
-            padding: 8px;
-            margin: 4px 0;
-            width: 102%;
-        }
-    }
-
-}
-
-@media screen and (min-width: 992px) and (max-width: 1600px) {
-    .contact_container {
-        height: 100vh;
-
-        .main_form_container {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-    }
-
-
 }
