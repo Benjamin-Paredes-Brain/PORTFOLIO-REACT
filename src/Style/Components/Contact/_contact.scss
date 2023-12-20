@@ -2,141 +2,74 @@
     height: 100vh;
 
     .main_form_container {
-        display: flex;
-        justify-content: center;
-        margin-top: 3rem;
-    }
-
-    .form_container {
-        max-width: 650px;
-        width: 100%;
-        margin: 1rem;
-    }
-
-    .inputs_form {
-        padding: 12px;
-        margin: 8px 0;
-        width: 96%;
-        border: 2px solid rgb(88, 29, 184);
-        font-size: 16px;
-        background: transparent;
-        color: $color_3;
-    }
-
-    .label_form {
-        display: block;
-        margin: 8px 0;
-        font-weight: bolder;
-        color: rgb(88, 29, 184);
-    }
-
-    .button_form {
-        background: transparent;
-        border: 2px solid rgb(88, 29, 184);
-        color: rgb(88, 29, 184);
-        padding: 12px;
-        margin: 8px 0;
-        cursor: pointer;
-        width: 100%;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .contact_container {
-    
-        .main_form_container {
-            margin-top: 0rem;
-        }
-    
         .form_container {
-            max-width: 650px;
-            width: 100%;
-            margin: 0.5rem;
-        }
-    
-        .inputs_form {
-            padding: 10px;
-            margin: 4px 0;
-            width: 96%;
-            border: 2px solid rgb(88, 29, 184);
-            font-size: 20px;
-            background: transparent;
-            color: $color_3;
-            font-size: 12px;
-        }
-    
-        .label_form {
-            display: block;
-            margin: 8px 0;
-            font-weight: bolder;
-            color: rgb(88, 29, 184);
-            font-size: 16px;
-        }
-    
-        .button_form {
-            background: transparent;
-            border: 2px solid rgb(88, 29, 184);
-            color: rgb(88, 29, 184);
-            padding: 10px;
-            margin: 8px 0;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            font-weight: bold;
-        }
-    
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .contact_container {
-        height: 80vh;
-
-        .main_form_container {
             display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             justify-content: center;
-            margin-top: 0;
-        }
 
-        .form_container {
-            width: 100%;
-            margin: 0 1rem;
-        }
+            .inputs_form {
+                border: 2px solid rgb(88, 29, 184);
+                background: transparent;
+                color: $color_3;
+                font-size: 16px;
+                padding: 1rem;
+                width: 100%;
+                margin: 1rem 0;
+            }
 
-        .inputs_form {
-            padding: 6px;
-            margin: 8px 0;
-            width: 96%;
-            border: 2px solid rgb(88, 29, 184);
-            font-size: 16px;
-            background: transparent;
-            color: $color_3;
-            font-size: 12px;
+            .label_form {
+                font-weight: bolder;
+                color: rgb(88, 29, 184);
+            }
         }
-
-        .label_form {
-            display: block;
-            margin: 0;
-            font-weight: bolder;
-            font-size: 12px;
-            color: rgb(88, 29, 184);
-        }
-
-        .button_form {
-            background: transparent;
-            border: 2px solid rgb(88, 29, 184);
-            color: rgb(88, 29, 184);
-            padding: 4px;
-            margin: 4px 0;
-            cursor: pointer;
-            width: 100%;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .contact_container {
+        .main_form_container {
+            .form_container {
+                .inputs_form {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+
+    .contact_container {
+        .main_form_container {
+            .form_container {
+                .inputs_form {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+    .contact_container {
+        .main_form_container {
+            .form_container {
+                .inputs_form {
+                    font-size: 22px;
+                    margin: 2rem 0;
+                }
+                .label_form {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
 }

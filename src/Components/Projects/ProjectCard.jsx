@@ -1,7 +1,12 @@
 export const ProjectCard = () => {
 
     const projects = [
-        { title: "Vurdertrend", img: "/Portada-VurderTrend.png", linkGitHub: "https://github.com/Benjamin-Paredes-Brain/ProyectoFinal-ReactJS-BenjaminParedesBrain", linkWeb: "https://vurdertrend.netlify.app/", description: "Vurdertrend is an e-commerce website developed entirely with React and utilizing Firebase as the database backend. It features responsive design and various functionalities." },
+        {
+            title: "Vurdertrend", img: "/Portada-VurderTrend.png",
+            linkGitHub: "https://github.com/Benjamin-Paredes-Brain/ProyectoFinal-ReactJS-BenjaminParedesBrain",
+            linkWeb: "https://vurdertrend.netlify.app/",
+            description: "Vurdertrend is an e-commerce DEMO website developed entirely with React and utilizing Firebase as the database backend. It features responsive design and various functionalities."
+        },
     ]
 
     return (

@@ -3,13 +3,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    bottom: 0;
+    margin: 1rem;
 
     .copy {
         text-align: center;
         color: $color_3;
+        font-size: 14px;
     }
 
     .social {
+        margin: 1rem 0;
         .social_icon {
             margin: 1rem;
             text-decoration: none;
@@ -20,44 +24,59 @@
 
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
     .footer_container {
-        position: relative;
-        bottom: 0;
-
         .copy {
-            font-size: 0.8rem;
+            font-size: 18px;
         }
-
+    
         .social {
             .social_icon {
-                margin: 1rem;
-                text-decoration: none;
-                font-size: 1rem;
-                color: $color_3;
+                margin: 1rem;;
+                font-size: 2rem;
             }
         }
-
+    
     }
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+
     .footer_container {
-        position: relative;
-        bottom: 0;
-
         .copy {
-            font-size: 0.8rem;
+            font-size: 18px;
         }
-
+    
         .social {
             .social_icon {
-                margin: 1rem;
-                text-decoration: none;
-                font-size: 1rem;
-                color: $color_3;
+                margin: 1rem;;
+                font-size: 2rem;
             }
         }
-
+    
     }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .footer_container {
+        .copy {
+            font-size: 20px;
+        }
+    
+        .social {
+            .social_icon {
+                margin: 1rem;;
+                font-size: 2rem;
+            }
+        }
+    
+    }
+
+
 }

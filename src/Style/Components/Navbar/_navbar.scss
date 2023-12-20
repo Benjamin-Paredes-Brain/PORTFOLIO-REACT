@@ -1,98 +1,118 @@
 .navbar_container {
     display: flex;
-    flex-direction: column;
-    margin-top: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
 
     .navbar_link {
-        color: $color_3;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-
+        justify-content: center;
+        align-items: baseline;
         text-decoration: none;
-        margin: 0.5rem;
-        padding: 0.2rem 0.3rem;
-        max-width: 9rem;
+        color: $color_3;
+        width: fit-content;
+        font-weight: bold;
+        padding: 10px 4px;
         border: 1px solid transparent;
-        border-radius: 5%;
-        transition: border-color 0.3s ease;
+        border-radius: 6px;
 
         &:hover {
             background: $bg_color;
-            box-shadow: $box_shadow 0px 8px 32px 0px;
+            box-shadow: $box_shadow 0px 2px 32px 0px;
             backdrop-filter: blur(40px);
             border-color: $border-color;
         }
 
         .navbar_icon {
-            margin: 0.8rem;
-            font-size: 1.2rem
+            font-size: 12px;
+            margin-right: 8px;
+            text-align: center;
         }
 
-        .navbar_link_txt {
-            font-weight: 900;
-            font-size: 1rem;
-            text-transform: uppercase;
+        .navbar_txt {
+            font-size: 14px;
             text-align: center;
+            text-transform: uppercase;
         }
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .navbar_container {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        margin: 3rem 0;
 
         .navbar_link {
+            width: 10rem;
+
             .navbar_icon {
-                margin: 0.4rem;
-                font-size: 1rem
+                font-size: 20px;
+                margin-right: 12px;
+            }
+
+            .navbar_txt {
+                font-size: 22px;
             }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
 
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
     .navbar_container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 5rem 0;
+        gap: 2rem;
 
         .navbar_link {
-            color: $color_3;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0.2rem;
-            text-decoration: none;
-            max-width: 100%;
-            border: 1px solid transparent;
-            border-radius: 5%;
-            transition: border-color 0.3s ease;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: fit-content;;
 
             &:hover {
                 background: $bg_color;
-                box-shadow: none;
+                box-shadow: $box_shadow 0px 8px 32px 0px;
                 backdrop-filter: blur(40px);
                 border-color: $border-color;
             }
 
             .navbar_icon {
-                margin: 0.3rem;
-                font-size: 0.8rem
+                font-size: 16px;
+                margin-right: 12px;
             }
 
-            .navbar_link_txt {
-                font-weight: 900;
-                font-size: 0.8rem;
-                text-transform: uppercase;
-                text-align: center;
+            .navbar_txt {
+                font-size: 18px;
             }
         }
     }
+}
 
+
+@media screen and (min-width: 1440px) {
+    .navbar_container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5rem 0;
+        gap: 3rem;
+
+        .navbar_link {
+            display: flex;
+            justify-content: flex-start;
+            width: fit-content;
+            border-radius: 8px;
+            padding: 1rem;
+
+            .navbar_icon {
+                font-size: 22px;
+                margin-right: 10px;
+            }
+
+            .navbar_txt {
+                font-size: 24px;
+            }
+        }
+    }
 }

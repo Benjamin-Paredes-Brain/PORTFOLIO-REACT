@@ -1,57 +1,46 @@
-import { useForm } from '@formspree/react';
-import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 import Swal from "sweetalert2";
 import 'sweetalert2/dist/sweetalert2.css';
 
 export const Contact = () => {
-    const [state, handleSubmit] = useForm('xbjvznqd');
-    const [showAlert, setShowAlert] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-    const formRef = useRef(null);
+    const form = useRef();
 
-    const handleFormSubmit = async (event) => {
-        const isSuccess = await handleSubmit(event);
-        setIsSuccess(isSuccess);
-        setShowAlert(true);
-        formRef.current.reset();
-    };
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    const showAlertMessage = () => {
-        if (!isSuccess) {
-            Swal.fire({
-                title: 'SUBMITTED FORM',
-                icon: 'success',
-                confirmButtonText: 'ACCEPT',
-                allowOutsideClick: false
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = '/contact';
-                }
+        emailjs.sendForm('service_e1bngrm', 'template_l7inrv4', form.current, 'XPZETJEvtYAR4w2Ct')
+            .then(() => {
+                Swal.fire({
+                    title: 'FORM SUBMITTED CORRECTLY',
+                    icon: 'success',
+                    confirmButtonText: 'ACCEPT',
+                    allowOutsideClick: false
+                })
+                form.current.reset()
+            }, (error) => {
+                Swal.fire({
+                    title: 'THERE WAS AN ERROR WHEN SENDING THE FORM',
+                    icon: 'error',
+                    confirmButtonText: 'ACCEPT',
+                    allowOutsideClick: false
+                })
             });
-        } else {
-            Swal.fire({
-                title: 'ERROR TO SUBMIT FORM',
-                icon: 'error',
-                confirmButtonText: 'OK',
-                allowOutsideClick: false
-            });
-        }
     };
 
     return (
         <div className="contact_container" id="contact">
             <h1 className="title">CONTACT</h1>
             <div className="main_form_container">
-                <form className="form_container" onSubmit={handleFormSubmit}>
+                <form className="form_container" ref={form} onSubmit={sendEmail}>
                     <label htmlFor="name" className="label_form">Name:</label>
                     <input type="text" id="name" name="name" className="inputs_form" placeholder="Example: Benjamin Brain" required />
                     <label htmlFor="email" className="label_form">Email:</label>
                     <input type="email" id="email" name="email" className="inputs_form" placeholder="Example: name@email.com" required />
                     <label htmlFor="message" className="label_form">Message:</label>
                     <textarea id="message" name="message" required className="inputs_form"></textarea>
-                    <button type="submit" className="button_form" disabled={state.submitting}>Send</button>
+                    <button className="inputs_form" style={{cursor: "pointer"}}>Send</button>
                 </form>
-                {showAlert && showAlertMessage()}
             </div>
         </div>
     )

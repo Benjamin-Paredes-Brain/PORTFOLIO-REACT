@@ -8,7 +8,7 @@ export const Home = () => {
             <div className="home_container">
                 <div>
                     <h1 className="title_home">BENJAMIN MARTIN PAREDES BRAIN</h1>
-                    <h2 className="title_home subtitle_home">FRONTEND DEVELOPER</h2>
+                    <h2 className="subtitle_home">FULLSTACK DEVELOPER</h2>
 
                     <Navbar />
                 </div>
@@ -19,7 +19,6 @@ export const Home = () => {
                     <p className="about">My current focus revolves around craft high-quality web applications and continuously improving my professional skills. My goal is to push my own every day, offering increasingly innovative and efficient results to technological challenges we confront.</p>
                     <p className="about">In the other hand, I enjoy nurturing my mind through books, exploring new worlds by reading and acquiring knowledge. In addition, I'm passionate about well-being and health. You'll regularly find me at the gym, working on my mind and body.</p>
                 </div>
-
 
             </div>
             <ArrowButton />

@@ -1,6 +1,6 @@
 .arrow_container {
     text-align: center;
-    margin-top: 200px;
+    margin: 2rem 0;
 
     .arrow {
         display: flex;
@@ -9,9 +9,6 @@
     }
 
     .arrow_circle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
         width: 36px;
@@ -33,10 +30,50 @@
     }
 }
 
-
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .arrow_container {
-        display: none;
+        margin: 8rem 0;
+    
+        .arrow {
+            font-size: 24px;
+        }
+    
+        .arrow_circle {
+            width: 60px;
+            height: 60px;
+            border: 3px solid;
+        }
     }
+}
 
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .arrow_container {
+        .arrow {
+            font-size: 20px;
+        }
+    
+        .arrow_circle {
+            width: 45px;
+            height: 45px;
+            border: 3px solid;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .arrow_container {
+        margin: 6rem 0;
+    
+        .arrow {
+            font-size: 26px;
+        }
+    
+        .arrow_circle {
+            width: 60px;
+            height: 60px;
+            border: 3px solid;
+        }
+    }
 }
