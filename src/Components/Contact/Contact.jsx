@@ -2,9 +2,12 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import Swal from "sweetalert2";
 import 'sweetalert2/dist/sweetalert2.css';
+import { LangContext } from "../Context/LangContext.jsx";
+import { useContext } from "react";
 
 export const Contact = () => {
     const form = useRef();
+    const { t } = useContext(LangContext);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -30,16 +33,16 @@ export const Contact = () => {
 
     return (
         <div className="contact_container" id="contact">
-            <h1 className="title">CONTACT</h1>
+            <h1 className="title">{t("titleSectionContact")}</h1>
             <div className="main_form_container">
                 <form className="form_container" ref={form} onSubmit={sendEmail}>
-                    <label htmlFor="name" className="label_form">Name:</label>
-                    <input type="text" id="name" name="name" className="inputs_form" placeholder="Example: Benjamin Brain" required />
-                    <label htmlFor="email" className="label_form">Email:</label>
-                    <input type="email" id="email" name="email" className="inputs_form" placeholder="Example: name@email.com" required />
-                    <label htmlFor="message" className="label_form">Message:</label>
+                    <label htmlFor="name" className="label_form">{t("contactLabelName")}</label>
+                    <input type="text" id="name" name="name" className="inputs_form" placeholder={t("contactPlaceholderName")} required />
+                    <label htmlFor="email" className="label_form">{t("contactLabelEmail")}</label>
+                    <input type="email" id="email" name="email" className="inputs_form" placeholder={t("contactPlaceholderEmail")} required />
+                    <label htmlFor="message" className="label_form">{t("contactLabelMessage")}</label>
                     <textarea id="message" name="message" required className="inputs_form"></textarea>
-                    <button className="inputs_form" style={{cursor: "pointer"}}>Send</button>
+                    <button className="inputs_form" style={{cursor: "pointer"}}>{t("contactButton")}</button>
                 </form>
             </div>
         </div>
