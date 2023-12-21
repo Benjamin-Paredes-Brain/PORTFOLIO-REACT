@@ -30,6 +30,8 @@ i18n
           contactButton:"Send",
           contactPlaceholderName:"Example: Benjamin Brain",
           contactPlaceholderEmail:"Example: name@email.com",
+          contactAlertSuccess: "FORM SUBMITTED CORRECTLY",
+          contactAlertError: "THERE WAS AN ERROR WHEN SENDING THE FORM",
 
           projectCardDescVurdertrend:"Vurdertrend is an e-commerce DEMO website developed entirely with React and utilizing Firebase as the database backend. It features responsive design and various functionalities.",
         },
@@ -60,6 +62,8 @@ i18n
           contactButton:"Enviar",
           contactPlaceholderName:"Ejemplo: Benjamin Brain",
           contactPlaceholderEmail:"Ejemplo: nombre@email.com",
+          contactAlertSuccess: "FORMULARIO ENVIADO CORRECTAMENTE",
+          contactAlertError: "HUBO UN ERROR AL ENVIAR EL FORMULARIO",
 
           projectCardDescVurdertrend:"Vurdertrend es una página web DEMO de e-commerce desarrollada completamente con React y utilizando Firebase como backend para la base de datos. Cuenta con un diseño completamente responsive y diversas funcionalidades."
         },

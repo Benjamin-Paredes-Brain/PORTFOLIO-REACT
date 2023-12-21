@@ -9,23 +9,29 @@ export const Contact = () => {
     const form = useRef();
     const { t } = useContext(LangContext);
 
+    const apiEmailService = import.meta.env.VITE_EMAIL_SERVICE
+    const apiEmailTemplate = import.meta.env.VITE_EMAIL_TEMPLATE
+    const apiEmailKey = import.meta.env.VITE_EMAIL_KEY
+
+
+
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_e1bngrm', 'template_l7inrv4', form.current, 'XPZETJEvtYAR4w2Ct')
+        emailjs.sendForm(apiEmailService, apiEmailTemplate, form.current, apiEmailKey)
             .then(() => {
                 Swal.fire({
-                    title: 'FORM SUBMITTED CORRECTLY',
+                    title: t("contactAlertSuccess"),
                     icon: 'success',
-                    confirmButtonText: 'ACCEPT',
+                    confirmButtonText: 'OK',
                     allowOutsideClick: false
                 })
                 form.current.reset()
             }, (error) => {
                 Swal.fire({
-                    title: 'THERE WAS AN ERROR WHEN SENDING THE FORM',
+                    title: t("contactAlertError"),
                     icon: 'error',
-                    confirmButtonText: 'ACCEPT',
+                    confirmButtonText: 'OK',
                     allowOutsideClick: false
                 })
             });
@@ -42,7 +48,7 @@ export const Contact = () => {
                     <input type="email" id="email" name="email" className="inputs_form" placeholder={t("contactPlaceholderEmail")} required />
                     <label htmlFor="message" className="label_form">{t("contactLabelMessage")}</label>
                     <textarea id="message" name="message" required className="inputs_form"></textarea>
-                    <button className="inputs_form" style={{cursor: "pointer"}}>{t("contactButton")}</button>
+                    <button className="inputs_form" style={{ cursor: "pointer" }}>{t("contactButton")}</button>
                 </form>
             </div>
         </div>
