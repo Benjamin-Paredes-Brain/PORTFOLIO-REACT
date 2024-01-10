@@ -4,3 +4,9 @@
   from = "/*"
   to = "https://benjaminparedes.com/:splat"
   status = 301
+
+
+[[redirects]]
+  from = "https://benjaminparedes.netlify.app/*"
+  to = "https://benjaminparedes.com/:splat"
+  status = 301
