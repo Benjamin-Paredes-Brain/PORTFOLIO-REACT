@@ -1,1 +1,6 @@
 /* /index.html 200
+
+[[redirects]]
+  from = "/*"
+  to = "https://benjaminparedes.com/:splat"
+  status = 301
